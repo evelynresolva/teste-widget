@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Imobiliária Exemplo</title>
+        <style>
+            :root {
+                color-scheme: light;
+                --ink: #18181b;
+                --muted: #71717a;
+                --line: #e4e4e7;
+                --bg: #fafafa;
+                --card: #ffffff;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--ink);
+                font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+            }
+            header {
+                border-bottom: 1px solid var(--line);
+                background: var(--card);
+            }
+            .wrap {
+                margin: 0 auto;
+                max-width: 960px;
+                padding: 0 20px;
+            }
+            header .wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 64px;
+            }
+            .logo {
+                font-weight: 600;
+                letter-spacing: -0.01em;
+            }
+            nav a {
+                color: var(--muted);
+                margin-left: 20px;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .hero {
+                padding: 56px 0 32px;
+            }
+            .hero h1 {
+                margin: 0 0 8px;
+                font-size: 30px;
+                letter-spacing: -0.02em;
+            }
+            .hero p {
+                margin: 0;
+                color: var(--muted);
+                max-width: 52ch;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 16px;
+                padding-bottom: 64px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                overflow: hidden;
+            }
+            .thumb {
+                height: 150px;
+                background: linear-gradient(135deg, #e4e4e7, #f4f4f5);
+            }
+            .card .body {
+                padding: 14px;
+            }
+            .card h2 {
+                margin: 0 0 4px;
+                font-size: 15px;
+            }
+            .card .price {
+                font-weight: 600;
+            }
+            .card .where {
+                color: var(--muted);
+                font-size: 13px;
+            }
+            .note {
+                border-top: 1px solid var(--line);
+                padding: 24px 0 64px;
+                color: var(--muted);
+                font-size: 13px;
+            }
+            code {
+                font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+                font-size: 12px;
+                background: #f4f4f5;
+                padding: 1px 5px;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <span class="logo">Imobiliária Exemplo</span>
+                <nav>
+                    <a href="#">Comprar</a>
+                    <a href="#">Alugar</a>
+                    <a href="#">Contato</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="wrap">
+            <section class="hero">
+                <h1>Apartamentos na região</h1>
+                <p>Página só para testar o chat. O conteúdo abaixo é fictício e existe para o widget ter onde abrir.</p>
+            </section>
+
+            <section class="grid">
+                <article class="card">
+                    <div class="thumb"></div>
+                    <div class="body">
+                        <h2>2 quartos, 68 m²</h2>
+                        <div class="price">R$ 420.000</div>
+                        <div class="where">Praia do Canto</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="thumb"></div>
+                    <div class="body">
+                        <h2>3 quartos, 95 m²</h2>
+                        <div class="price">R$ 680.000</div>
+                        <div class="where">Jardim da Penha</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="thumb"></div>
+                    <div class="body">
+                        <h2>1 quarto, 42 m²</h2>
+                        <div class="price">R$ 265.000</div>
+                        <div class="where">Centro</div>
+                    </div>
+                </article>
+            </section>
+
+            <p class="note">
+                O chat deste teste é carregado pelo snippet no fim do HTML. Se o botão não aparecer, abra o console do navegador: a
+                chave em <code>data-key</code> precisa estar autorizada para a origem exata desta página.
+            </p>
+        </main>
+
+        <!-- Cole aqui o snippet que a tela da integração de Widget gera, com a sua chave. -->
+        <script src="https://runtime.dev.resolva.ai/widget.js" data-key="COLE_SUA_CHAVE_AQUI" async></script>
+    </body>
+</html>
